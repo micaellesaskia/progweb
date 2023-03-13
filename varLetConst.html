@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Tipo Var Let e Const </title>
+</head>
+<body>
+    <script>
+        var disciplina = "fundamentos de Programação"; //tirando o var eu apenas atribuo um valor
+        //global (Acessada de qualquer parte)
+
+        function modificaDisciplina(){
+            disciplina = "Lógica de Programação";
+        }
+        modificaDisciplina(); //chama a função
+        if(true){
+            disciplina = "Programação Web";
+        }
+        var i = 0;
+        while(i < 5){
+            disciplina = "Sistemas Operacionais"; 
+            i++
+        }
+
+        {//bloco
+            disciplina = "Gestão de tempo";
+        }
+        console.log(disciplina);
+        console.log("Escopo de função do Tipo VAR");
+
+        function media(n1,n2){
+            var med = (n1,n2)/2; //Escopo de função
+            console.log(med); //devo atribuir a variável dentro da função
+        }
+        media(7,8); //executa somente se eu chamar a função pelo seu nome 
+        //console.log(med); acesso negado 
+        var escola = "Lucas Emmanuel";
+        console.log(escola);
+        var escola = "Amélia Figueiredo";//redeclaração da variável
+        console.log(escola);
+
+        console.log("-----Escopo do tipo LET-----");
+
+        let professor = "João Victor";
+        function modProd(){
+            professor = "Rivânio";
+        }
+        modProd();
+        if(true);
+    </script>
+</body>
+</html>
